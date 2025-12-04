@@ -1,0 +1,36 @@
+import pandas as p
+data_frame=p.DataFrame(["madhuri","teja","deepu","lakshmi"],index=["a","b","c","d"] ,columns=["name"])
+print(data_frame)
+data_frame=p.DataFrame([("madhuri","tester",12345),("deepu","dev",23454),("teja","tester",67865),("lakshmi","dev",37989)],columns=["name","role","salary"])
+print(data_frame)
+data_frame=p.DataFrame({"employees":"harshi","role":"dev","salary":12345})
+print(data_frame)
+data_frame=p.DataFrame({"employees":"harshi","role":"dev","salary":12345},index=["A"])
+print(data_frame)
+data_frame=p.DataFrame({"employees":["harshi","ramana","venky"],"role":["dev","tester","dev"],"salary":[12345,23333,12122]},index=["a","b","c"])
+print(data_frame)
+data_frame=p.DataFrame({"employees":["harshi","ramana","venky"],"role":["dev","tester","dev"],"salary":[12345,23333,12122]})
+print(data_frame)
+data_frame=p.DataFrame({"employe_id":range(1,11),"employees":["harshi","ramana","venky","rithwik","sathwik","aadithya","aakash","susmitha","meghana","narasimha"],
+                        "role":["dev","tester","dev","tester","dev","tester","tester","dev","tester","dev"],
+                        "salary":[12345,23333,12122,2345,9876,565565,98982,656536,462536,93848]})
+print(data_frame)
+print(data_frame.to_excel("data.xlsx",index=False))
+data_frame=p.DataFrame({"employe_id":range(1,11),"employees":["harshi","ramana","venky","rithwik","sathwik","aadithya","aakash","susmitha","meghana","narasimha"],
+                        "role":["dev","tester","dev","tester","dev","tester","tester","dev","tester","dev"],
+                        "salary":[12345,23333,12122,2345,9876,565565,98982,656536,462536,93848]})
+print(data_frame.to_csv("data.csv",index=False))
+data_frame=p.DataFrame({"employe_id":range(1,11),"employees":["harshi","ramana","venky","rithwik","sathwik","aadithya","aakash","susmitha","meghana","narasimha"],
+                        "role":["dev","tester","dev","tester","dev","tester","tester","dev","tester","dev"],
+                        "salary":[12345,23333,12122,2345,9876,565565,98982,656536,462536,93848]})
+print(data_frame.to_json("data.json",index=False))
+data_frame=p.DataFrame({"employe_id":range(1,11),"employees":["harshi","ramana","venky","rithwik","sathwik","aadithya","aakash","susmitha","meghana","narasimha"],
+                        "role":["dev","tester","dev","tester","dev","tester","tester","dev","tester","dev"],
+                        "salary":[12345,23333,12122,2345,9876,565565,98982,656536,462536,93848]})
+print(data_frame.to_html("data.html",index=False))
+stored_data=p.read_excel("data.xlsx")
+print(stored_data)
+stored_data=p.read_csv("data.csv")
+print(stored_data)
+stored_data=p.read_html("data.html")
+print(stored_data)
